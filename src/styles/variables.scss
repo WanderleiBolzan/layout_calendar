@@ -1,9 +1,9 @@
 $width: 100px;
 $height: 100px;
-$gap: 1px;
+$calendar-gap: 1px;
 $columns: 7;
 $padding: 10px;
-$calendar-width: ($width * $columns) + ($gap * ($columns - 1));
+$calendar-width: ($width * $columns) + ($calendar-gap * ($columns - 1));
 $days: sun, mon, tue, wed, thu, fri, sat;
 $days-offsets: (
   mon: 0,

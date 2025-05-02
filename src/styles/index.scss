@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: $calendar-width;
-  gap: $gap;
+  gap: $calendar-gap;
   padding: $padding;
   justify-content: flex-start;
 
@@ -25,15 +25,15 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #eee;
-    height: $width;
-    width: $height;
+    height: $height;
+    width: $width;
     border: 1px solid black;
     transition: all 0.5s;
 
     &:hover {
       cursor: pointer;
       background-color: #ffbfcb;
-      transform: translateY(-18px);
+      transform: translateY(-16px);
     }
 
     @for $day from 1 through 31 {
@@ -46,7 +46,7 @@ body {
   @each $day, $index in $days-offsets {
     &--start-day-#{$day} {
       .calendar__day:first-child {
-        margin-left: ($width + $gap) * $index;
+        margin-left: ($width + $calendar-gap) * $index;
       }
     }
   }
